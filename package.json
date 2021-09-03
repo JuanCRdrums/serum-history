@@ -37,6 +37,6 @@
     "test": "jasmine-ts --config=jasmine.json"
   },
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   }
 }

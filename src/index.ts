@@ -196,7 +196,12 @@ const redisConfig = { host, port, password, db: 0, max_conn }
 const pool = new TedisPool(redisConfig)
 
 const app = express()
-app.use(cors())
+const corsOptions ={
+  origin:'*', 
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200,
+}
+app.use(cors(corsOptions))
 
 app.get('/tv/config', async (req, res) => {
   const response = {

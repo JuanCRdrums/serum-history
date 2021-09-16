@@ -111,6 +111,7 @@ const nativeMarketsV3: Record<string, string> = {
   'FRONT/USDC' : "9Zx1CvxSVdroKMMWf2z8RwrnrLiQZ9VkQ7Ex3syQqdSH",
   'FTR/USDC' : "4JP75nztBEo5rYhW1LTQyc4qfjPB33jMWEUvp2DGrQQR",
   'FTT/USDC' : "2Pbh1CvRVku1TgewMfycemghf6sU9EyuFDcNXqvRmSxc",
+  'GRAPE/USDC' : "72aW3Sgp1hMTXUiCq8aJ39DX2Jr7sZgumAvdLrLuCMLe",
   'GRT/USDC' : "E6umfgnsastaGANjpvzb15jaXdZH1wsg4ENHARgbjqUz",
   'HGET/USDC' : "88vztw7RTN6yJQchVvxrs6oXUDryvpv9iJaFa1EEmg87",
   'HNT/USDC' : "CnUV42ZykoKUnMDdyefv5kP6nDSJf7jFd7WXAecC6LYr",
@@ -196,12 +197,7 @@ const redisConfig = { host, port, password, db: 0, max_conn }
 const pool = new TedisPool(redisConfig)
 
 const app = express()
-const corsOptions ={
-  origin:'*', 
-  credentials:true,            //access-control-allow-credentials:true
-  optionSuccessStatus:200,
-}
-app.use(cors(corsOptions))
+app.use(cors())
 
 app.get('/tv/config', async (req, res) => {
   const response = {

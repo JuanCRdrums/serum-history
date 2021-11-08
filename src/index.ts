@@ -202,7 +202,6 @@ const nativeMarketsV3: Record<string, string> = {
   'renDOGE/USDC' : "5FpKCWYXgHWZ9CdDMHjwxAfqxJLdw2PRXuAmtECkzADk",
   'renLUNA/USDC' : "CxDhLbbM9uAA2AXfSPar5qmyfmC69NLj3vgJXYAsSVBT",
   'renZEC/USDC' : "2ahbUT5UryyRVxPnELtTmDLLneN26UjBQFgfMVvbWDTb",
-  'AURY/USDC' : "461R7gK9GK1kLUXQbHgaW9L6PESQFSLGxKXahvcHEJwD",
 }
 
 

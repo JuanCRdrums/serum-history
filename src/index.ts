@@ -90,6 +90,7 @@ const clusterUrl =
 const programIdV3 = '9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin'
 
 
+
 const nativeMarketsV3: Record<string, string> = {
   '1INCH/USDT' : "HCyhGnC77f7DaxQEvzj59g9ve7eJJXjsMYFWo4t7shcj",
   'AAVE/USDC' : "CAww1itfT8rFeTCJCLZqTq9anZ7FpC8NzULNLcJMG4Qa",
@@ -155,6 +156,7 @@ const nativeMarketsV3: Record<string, string> = {
   'MNGO/USDC' : "3d4rzwpy9iGdCZvgxcu7B1YocYffVLsQXPXkBZKt2zLc",
   'MOLA/USDC' : "HSpeWWRqBJ4HH2FPyfDhoN1AUq3gYoDenQGZASSqzYW1",
   'mSOL/USDC' : "6oGsL2puUgySccKzn9XA9afqF217LfxP5ocq4B3LWsjy",
+  'NFD/USDC' : "EtEKBLqLfPcm8mXn5JdzY9rMghHnTMxpWwsdASasAMNa",
   'OOGI/USDC' : "ANUCohkG9gamUn6ofZEbnzGkjtyMexDhnjCwbLDmQ8Ub",
   'ORCA/USDC' : "8N1KkhaCYDpj3awD58d85n973EwkpeYnRp84y1kdZpMX",
   'OXS/USDC' : "gtQT1ipaCBC5wmTm99F9irBDhiLJCo1pbxrcFUMn6mp",

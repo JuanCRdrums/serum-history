@@ -91,6 +91,7 @@ const programIdV3 = '9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin'
 
 
 
+
 const nativeMarketsV3: Record<string, string> = {
   '1INCH/USDT' : "HCyhGnC77f7DaxQEvzj59g9ve7eJJXjsMYFWo4t7shcj",
   'AAVE/USDC' : "CAww1itfT8rFeTCJCLZqTq9anZ7FpC8NzULNLcJMG4Qa",
@@ -107,12 +108,14 @@ const nativeMarketsV3: Record<string, string> = {
   'BTC/USDT' : "C1EuT9VokAKLiW7i2ASnZUvxDoKuKkCpDDeNxAptuNe4",
   'BTC/USDC' : "A8YFbxQYFVqKZaoYJLLUVcQiWP7G2MeEgW5wsAQgMvFw",
   'CATO/USDC' : "9fe1MWiKqUdwift3dEpxuRHWftG72rysCRHbxDy6i9xB",
+  'CAVE/USDC' : "KrGK6ZHyE7Nt35D7GqAKJYAYUPUysGtVBgTXsJuAxMT",
   'CEL/USDC' : "9MFFsTVgw6gKPZ1rpc6CSJSLaiNAonChcS7zCCMrAwEP",
   'CHEEMS/USDC' : "5WVBCaUPZF4HP3io9Z56N71cPMJt8qh3c4ZwSjRDeuut",
   'COMP/USDC' : "Dbyf1PPrAXfMe1LdEq57QW9GY1D4nNEt2fKVGEo6S3MU",
   'COPE/USDC' : "6fc7v3PmjZG9Lk2XTot6BywGyYLkBQuzuFKd4FpCsPxk",
   'CREAM/USDC' : "7nZP6feE94eAz9jmfakNJWPwEKaeezuKKC5D1vrnqyo2",
   'CRP/USDC' : "93mtNf4qzvytwp5sWrSC7JNUccPAomEE39ztErUq5V3F",
+  'CWAR/USDC' : "CDYafmdHXtfZadhuXYiR7QaqmK9Ffgk2TA8otUWj9SWz",
   'CYS/USDC' : "6V6y6QFi17QZC9qNRpVp7SaPiHpCTp2skbRQkUyZZXPW",
   'DATE/USDC' : "3jszawPiXjuqg5MwAAHS8wehWy1k7de5u5pWmmPZf6dM",
   'DXL/USDC' : "DYfigimKWc5VhavR4moPBibx9sMcWYVSjVdWvPztBPTa",
@@ -146,6 +149,7 @@ const nativeMarketsV3: Record<string, string> = {
   'LIQ/USDC' : "D7p7PebNjpkH6VNHJhmiDFNmpz9XE7UaTv9RouxJMrwb",
   'LQID/USDC' : "4FPFh1iAiitKYMCPDBmEQrZVgA1DVMKHZBU2R7wjQWuu",
   'LUA/USDC' : "4xyWjQ74Eifq17vbue5Ut9xfFNfuVB116tZLEpiZuAn8",
+  'MANA/USDC' : "7GSn6KQRasgPQCHwCbuDjDCsyZ3cxVHKWFmBXzJUUW8P",
   'MAPS/USDC' : "3A8XQRWXC7BjLpgLDDBhQJLT5yPCzS16cGYRKHkKxvYo",
   'MAPSPOOL/USDC' : "7ygqNwjA94Qu8YKxB8j2ePXYEFyWLcYGUUCVzV9puAhJ",
   'MATH/USDC' : "J7cPYBrXVy8Qeki2crZkZavcojf2sMRyQU7nx438Mf8t",
@@ -174,6 +178,7 @@ const nativeMarketsV3: Record<string, string> = {
   'RSR/USDC' : "3h5QsiZKLkmApBTsMvJBZ8fPivo9HSrmR1LaJABN9zx6",
   'SAIL/USDC' : "6hwK66FfUdyhncdQVxWFPRqY8y6usEvzekUaqtpKEKLr",
   'SAMO/USDC' : "FR3SPJmgfRSKKQ2ysUZBu7vJLpzTixXnjzb84bY3Diif",
+  'SAND/USDC' : "3FE2g3cadTJjN3C7gNRavwnv7Yh9Midq7h9KgTVUE7tR",
   'SBR/USDC' : "HXBi8YBwbh4TXF6PjVw81m8Z3Cc4WBofvauj5SBFdgUs",
   'SECO/USDC' : "CjsuF2gB28KqgniogCbbpp7FDMBwAkTawEN3gYKsgfS8",
   'SHIB/USDC' : "Er7Jp4PADPVHifykFwbVoHdkL1RtZSsx9zGJrPJTrCgW",
@@ -212,6 +217,7 @@ const nativeMarketsV3: Record<string, string> = {
   'renLUNA/USDC' : "CxDhLbbM9uAA2AXfSPar5qmyfmC69NLj3vgJXYAsSVBT",
   'renZEC/USDC' : "2ahbUT5UryyRVxPnELtTmDLLneN26UjBQFgfMVvbWDTb",
 }
+
 
 
 const symbolsByPk = Object.assign(

@@ -90,6 +90,7 @@ const clusterUrl =
 const programIdV3 = '9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin'
 
 
+
 const nativeMarketsV3: Record<string, string> = {
   '1INCH/USDT' : "HCyhGnC77f7DaxQEvzj59g9ve7eJJXjsMYFWo4t7shcj",
   'AAVE/USDC' : "CAww1itfT8rFeTCJCLZqTq9anZ7FpC8NzULNLcJMG4Qa",
@@ -97,11 +98,14 @@ const nativeMarketsV3: Record<string, string> = {
   'AKRO/USDC' : "5CZXTTgVZKSzgSA3AFMN5a2f3hmwmmJ6hU8BHTEJ3PX8",
   'ALEPH/USDC' : "GcoKtAmTy5QyuijXSmJKBtFdt99e6Buza18Js7j9AJ6e",
   'ALM/USDC' : "DNxn3qM61GZddidjrzc95398SCWhm5BUyt8Y8SdKYr8W",
+  'APT/USDC' : "ATjWoJDChATL7E5WVeSk9EsoJAhZrHjzCZABNx3Miu8B",
   'ATLAS/USDC' : "Di66GTLsV64JgCCYGVcY21RZ173BHkjJVgPyezNN7P1K",
   'AURY/USDC' : "461R7gK9GK1kLUXQbHgaW9L6PESQFSLGxKXahvcHEJwD",
   'AXS/USDC' : "HZCheduA4nsSuQpVww1TiyKZpXSAitqaXxjBD2ymg22X",
   'BLT/USDC' : "Bo7aDwpZ8xHh6YGbiNMhcrHWpoB1f6ELgbaGk6M6o8Yn",
   'BMBO/USDC' : "8dpaLWWPv6vFong1D8gHFDmYzHQreXuKcui3XCKBACCj",
+  'BNB/USDC' : "3zzTxtDCt9PimwzGrgWJEbxZfSLetDMkdYegPanGNpMf",
+  'BOKU/USDC' : "Dvm8jjdAy8uyXn9WXjS2p1mcPeFTuYS6yW2eUL9SJE8p",
   'BOP/USDC' : "7MmPwD1K56DthW14P1PnWZ4zPCbPWemGs3YggcT1KzsM",
   'BTC/USDT' : "C1EuT9VokAKLiW7i2ASnZUvxDoKuKkCpDDeNxAptuNe4",
   'BTC/USDC' : "A8YFbxQYFVqKZaoYJLLUVcQiWP7G2MeEgW5wsAQgMvFw",
@@ -142,6 +146,7 @@ const nativeMarketsV3: Record<string, string> = {
   'JSOL/USDC' : "8mQ3nNCdcwSHkYwsRygTbBFLeGPsJ4zB2zpEwXmwegBh",
   'KEEP/USDC' : "3rgacody9SvM88QR83GHaNdEEx4Fe2V2ed5GJp2oeKDr",
   'KIN/USDC' : "Bn6NPyr6UzrFAwC4WmvPvDr2Vm8XSUnFykM2aQroedgn",
+  'KKO/USDC' : "9zR51YmUq2Tzccaq4iXXWDKbNy2TkEyPmoqCsfpjw2bc",
   'KURO/USDC' : "9oXkdAWFyjDH8BbYrDVJ77r6GWPmUWo9ZYYpE25SZ2td",
   'LARIX/USDC' : "DE6EjZoMrC5a3Pbdk8eCMGEY9deeeHECuGFmEuUpXWZm",
   'LDO/USDC' : "5kdErBywDQzHkJedkFoAZp4L2r7GdX4gwi79aCMNoNXs",
@@ -169,6 +174,7 @@ const nativeMarketsV3: Record<string, string> = {
   'OXYPOOL/USDC' : "G1uoNqQzdasMUvXV66Eki5dwjWv5N9YU8oHKJrE4mfka",
   'PAXG/USDC' : "GJWnwZJ599xjf7cRPP93aaVKqD5xUG5PBLNypHgPxitF",
   'PERP/USDC' : "7AHAKkL94Mx2VAkQb2kk74oNsxDnQ6aab4XwKwisfFdB",
+  'PEOPLE/USDC' : "GsWEL352sYgQC3uAVKgEQz2TtA1RA5cgNwUQahyzwJyz",
   'POLIS/USDC' : "HxFLKUAmAMLz1jtT3hbvCMELwH5H9tpM2QugP8sKyfhW",
   'PORT/USDC' : "8x8jf7ikJwgP9UthadtiGFgfFuyyyYPHL3obJAuxFWko",
   'PRT/USDC' : "CsNZMtypiGgxm6JrmYVJWnLnJNsERrmT3mQqujLsGZj",
@@ -210,9 +216,11 @@ const nativeMarketsV3: Record<string, string> = {
   'USDT/USDC' : "77quYg4MGneUdjgXCunt9GgM1usmrxKY31twEy3WHwcS",
   'UNI/USDC' : "6JYHjaQBx6AtKSSsizDMwozAEDEZ5KBsSUzH7kRjGJon",
   'UPS/USDC' : "DByPstQRx18RU2A8DH6S9mT7bpT6xuLgD2TTFiZJTKZP",
+  'VI/USDC' : "5fbYoaSBvAD8rW6zXo6oWqcCsgbYZCecbxAouk97p8SM",
   'WAG/USDC' : "BHqcTEDhCoZgvXcsSbwnTuzPdxv1HPs6Kz4AnPpNrGuq",
   'WOO/USDC' : "2Ux1EYeWsxywPKouRCNiALCZ1y3m563Tc4hq1kQganiq",
   'WOOF/USDC' : "CwK9brJ43MR4BJz2dwnDM7EXCNyHhGqCJDrAdsEts8n5",
+  'XTAG/USDC' : "6QM3iZfkVc5Yyb5z8Uya1mvqU1JBN9ez81u9463px45A",
   'YFI/USDC' : "7qcCo8jqepnjjvB5swP4Afsr3keVBs6gNpBTNubd1Kr2",
   'renBCH/USDC' : "FS8EtiNZCH72pAK83YxqXaGAgk3KKFYphiTcYA2yRPis",
   'renBTC/USDC' : "74Ciu5yRzhe8TFTHvQuEVbFZJrbnCMRoohBK33NNiPtv",
@@ -220,6 +228,7 @@ const nativeMarketsV3: Record<string, string> = {
   'renLUNA/USDC' : "CxDhLbbM9uAA2AXfSPar5qmyfmC69NLj3vgJXYAsSVBT",
   'renZEC/USDC' : "2ahbUT5UryyRVxPnELtTmDLLneN26UjBQFgfMVvbWDTb",
 }
+
 
 
 

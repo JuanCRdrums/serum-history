@@ -71,7 +71,7 @@ async function collectEventQueue(m: MarketConfig, r: RedisConfig) {
       console.error(m.marketName, err.toString())
     }
     await sleep({
-      Seconds: process.env.INTERVAL ? parseInt(process.env.INTERVAL) : 10,
+      Seconds: process.env.INTERVAL ? parseInt(process.env.INTERVAL) : 20,
     })
   }
 }
@@ -86,7 +86,7 @@ if (redisUrl.password !== '') {
 
 const network = 'mainnet-beta'
 const clusterUrl =
-  process.env.RPC_ENDPOINT_URL || 'https://solana-api.projectserum.com'
+  process.env.RPC_ENDPOINT_URL || 'https://connect.runnode.com/?apikey=7Tgub7ENXRXSBpzN6FXJ'
 const programIdV3 = '9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin'
 
 

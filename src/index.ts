@@ -22,34 +22,40 @@ async function collectEventQueue(m: MarketConfig, r: RedisConfig) {
   )
 
   async function fetchTrades(lastSeqNum?: number): Promise<[Trade[], number]> {
-    const now = Date.now()
-    const accountInfo = await connection.getAccountInfo(
-      market['_decoded'].eventQueue
-    )
-    if (accountInfo === null) {
-      throw new Error(
-        `Event queue account for market ${m.marketName} not found`
+    try{
+      const now = Date.now()
+      const accountInfo = await connection.getAccountInfo(
+        market['_decoded'].eventQueue
       )
+      if (accountInfo === null) {
+        throw new Error(
+          `Event queue account for market ${m.marketName} not found`
+        )
+      }
+      const { header, events } = decodeRecentEvents(accountInfo.data, lastSeqNum)
+      const takerFills = events.filter(
+        (e) => e.eventFlags.fill && !e.eventFlags.maker
+      )
+      const trades = takerFills
+        .map((e) => market.parseFillEvent(e))
+        .map((e) => {
+          return {
+            price: e.price,
+            side: e.side === 'buy' ? TradeSide.Buy : TradeSide.Sell,
+            size: e.size,
+            ts: now,
+          }
+        })
+      /*
+      if (trades.length > 0)
+        console.log({e: events.map(e => e.eventFlags), takerFills, trades})
+      */
+      return [trades, header.seqNum]
     }
-    const { header, events } = decodeRecentEvents(accountInfo.data, lastSeqNum)
-    const takerFills = events.filter(
-      (e) => e.eventFlags.fill && !e.eventFlags.maker
-    )
-    const trades = takerFills
-      .map((e) => market.parseFillEvent(e))
-      .map((e) => {
-        return {
-          price: e.price,
-          side: e.side === 'buy' ? TradeSide.Buy : TradeSide.Sell,
-          size: e.size,
-          ts: now,
-        }
-      })
-    /*
-    if (trades.length > 0)
-      console.log({e: events.map(e => e.eventFlags), takerFills, trades})
-    */
-    return [trades, header.seqNum]
+    catch (err){
+      console.error(err.toString())
+      return [[],0]
+    }
   }
 
   async function storeTrades(ts: Trade[]) {

@@ -10,7 +10,8 @@ import { RedisConfig, RedisStore, createRedisStore } from './redis'
 import { resolutions, sleep } from './time'
 
 async function collectEventQueue(m: MarketConfig, r: RedisConfig) {
-  const store = await createRedisStore(r, m.marketName)
+  try{
+    const store = await createRedisStore(r, m.marketName)
   const marketAddress = new PublicKey(m.marketPk)
   const programKey = new PublicKey(m.programId)
   const connection = new Connection(m.clusterUrl)
@@ -26,59 +27,62 @@ async function collectEventQueue(m: MarketConfig, r: RedisConfig) {
       const now = Date.now()
       const accountInfo = await connection.getAccountInfo(
         market['_decoded'].eventQueue
-      )
-      if (accountInfo === null) {
-        throw new Error(
-          `Event queue account for market ${m.marketName} not found`
         )
+        if (accountInfo === null) {
+          throw new Error(
+            `Event queue account for market ${m.marketName} not found`
+          )
+        }
+        const { header, events } = decodeRecentEvents(accountInfo.data, lastSeqNum)
+        const takerFills = events.filter(
+          (e) => e.eventFlags.fill && !e.eventFlags.maker
+        )
+        const trades = takerFills
+          .map((e) => market.parseFillEvent(e))
+          .map((e) => {
+            return {
+              price: e.price,
+              side: e.side === 'buy' ? TradeSide.Buy : TradeSide.Sell,
+              size: e.size,
+              ts: now,
+            }
+          })
+        /*
+        if (trades.length > 0)
+          console.log({e: events.map(e => e.eventFlags), takerFills, trades})
+        */
+        return [trades, header.seqNum]
       }
-      const { header, events } = decodeRecentEvents(accountInfo.data, lastSeqNum)
-      const takerFills = events.filter(
-        (e) => e.eventFlags.fill && !e.eventFlags.maker
-      )
-      const trades = takerFills
-        .map((e) => market.parseFillEvent(e))
-        .map((e) => {
-          return {
-            price: e.price,
-            side: e.side === 'buy' ? TradeSide.Buy : TradeSide.Sell,
-            size: e.size,
-            ts: now,
-          }
-        })
-      /*
-      if (trades.length > 0)
-        console.log({e: events.map(e => e.eventFlags), takerFills, trades})
-      */
-      return [trades, header.seqNum]
-    }
-    catch (err){
-      console.error(err.toString())
-      return [[],0]
-    }
-  }
-
-  async function storeTrades(ts: Trade[]) {
-    if (ts.length > 0) {
-      console.log(m.marketName, ts.length)
-      for (let i = 0; i < ts.length; i += 1) {
-        await store.storeTrade(ts[i])
+      catch (err){
+        console.error(err.toString())
+        return [[],0]
       }
     }
-  }
 
-  while (true) {
-    try {
-      const lastSeqNum = await store.loadNumber('LASTSEQ')
-      const [trades, currentSeqNum] = await fetchTrades(lastSeqNum)
-      storeTrades(trades)
-      store.storeNumber('LASTSEQ', currentSeqNum)
-    } catch (err) {
-      console.error(m.marketName, err.toString())
+    async function storeTrades(ts: Trade[]) {
+      if (ts.length > 0) {
+        console.log(m.marketName, ts.length)
+        for (let i = 0; i < ts.length; i += 1) {
+          await store.storeTrade(ts[i])
+        }
+      }
     }
-    await sleep({
-      Seconds: process.env.INTERVAL ? parseInt(process.env.INTERVAL) : 30,
-    })
+
+    while (true) {
+      try {
+        const lastSeqNum = await store.loadNumber('LASTSEQ')
+        const [trades, currentSeqNum] = await fetchTrades(lastSeqNum)
+        storeTrades(trades)
+        store.storeNumber('LASTSEQ', currentSeqNum)
+      } catch (err) {
+        console.error(m.marketName, err.toString())
+      }
+      await sleep({
+        Seconds: process.env.INTERVAL ? parseInt(process.env.INTERVAL) : 30,
+      })
+    }
+  } catch (err) {
+    console.error(m.marketName, err.toString())
   }
 }
 

@@ -102,6 +102,7 @@ const programIdV3 = '9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin'
 
 
 
+
 const nativeMarketsV3: Record<string, string> = {
   '1INCH/USDT' : "HCyhGnC77f7DaxQEvzj59g9ve7eJJXjsMYFWo4t7shcj",
   'AAVE/USDC' : "CAww1itfT8rFeTCJCLZqTq9anZ7FpC8NzULNLcJMG4Qa",
@@ -113,6 +114,7 @@ const nativeMarketsV3: Record<string, string> = {
   'ATLAS/USDC' : "Di66GTLsV64JgCCYGVcY21RZ173BHkjJVgPyezNN7P1K",
   'AURY/USDC' : "461R7gK9GK1kLUXQbHgaW9L6PESQFSLGxKXahvcHEJwD",
   'AXS/USDC' : "HZCheduA4nsSuQpVww1TiyKZpXSAitqaXxjBD2ymg22X",
+  'BLOCK/USDC' : "2b6GbUbY979QhRoWb2b9F3vNi7pcCGPDivuiKPHC56zY",
   'BLT/USDC' : "Bo7aDwpZ8xHh6YGbiNMhcrHWpoB1f6ELgbaGk6M6o8Yn",
   'BMBO/USDC' : "8dpaLWWPv6vFong1D8gHFDmYzHQreXuKcui3XCKBACCj",
   'BNB/USDC' : "3zzTxtDCt9PimwzGrgWJEbxZfSLetDMkdYegPanGNpMf",
@@ -124,10 +126,12 @@ const nativeMarketsV3: Record<string, string> = {
   'CAVE/USDC' : "KrGK6ZHyE7Nt35D7GqAKJYAYUPUysGtVBgTXsJuAxMT",
   'CEL/USDC' : "9MFFsTVgw6gKPZ1rpc6CSJSLaiNAonChcS7zCCMrAwEP",
   'CHEEMS/USDC' : "5WVBCaUPZF4HP3io9Z56N71cPMJt8qh3c4ZwSjRDeuut",
+  'CHICKS/USDC' : "Eg8a9ZicLPSyak4CiXfiMeJK6jmHq57Xx5ag5GY6vcDj",
   'COMP/USDC' : "Dbyf1PPrAXfMe1LdEq57QW9GY1D4nNEt2fKVGEo6S3MU",
   'COPE/USDC' : "6fc7v3PmjZG9Lk2XTot6BywGyYLkBQuzuFKd4FpCsPxk",
   'CREAM/USDC' : "7nZP6feE94eAz9jmfakNJWPwEKaeezuKKC5D1vrnqyo2",
   'CRP/USDC' : "93mtNf4qzvytwp5sWrSC7JNUccPAomEE39ztErUq5V3F",
+  'CRWNY/USDC' : "H8GSFzSZmPNs4ANW9dPd5XTgrzWkta3CaT57TgWYs7SV",
   'CWAR/USDC' : "CDYafmdHXtfZadhuXYiR7QaqmK9Ffgk2TA8otUWj9SWz",
   'CYS/USDC' : "6V6y6QFi17QZC9qNRpVp7SaPiHpCTp2skbRQkUyZZXPW",
   'DATE/USDC' : "3jszawPiXjuqg5MwAAHS8wehWy1k7de5u5pWmmPZf6dM",
@@ -146,7 +150,6 @@ const nativeMarketsV3: Record<string, string> = {
   'GOD/MIX' : "ABdKNuKrgdTjvy5kW1cmrC826NShzu4FYAfPSHRQJkm3",
   'GOFX/USDC' : "2wgi2FabNsSDdb8dke9mHFB67QtMYjYa318HpSqyJLDD",
   'GRAPE/USDC' : "72aW3Sgp1hMTXUiCq8aJ39DX2Jr7sZgumAvdLrLuCMLe",
-  'GRT/USDC' : "E6umfgnsastaGANjpvzb15jaXdZH1wsg4ENHARgbjqUz",
   'HGET/USDC' : "88vztw7RTN6yJQchVvxrs6oXUDryvpv9iJaFa1EEmg87",
   'HNT/USDC' : "CnUV42ZykoKUnMDdyefv5kP6nDSJf7jFd7WXAecC6LYr",
   'HOLY/USDC' : "QzB9DfWbNAUpfkwLNMLGfkK1AM2zttkMYGSwx5iCnGe",
@@ -193,6 +196,7 @@ const nativeMarketsV3: Record<string, string> = {
   'PRT/USDC' : "CsNZMtypiGgxm6JrmYVJWnLnJNsERrmT3mQqujLsGZj",
   'RAY/USDC' : "2xiv8A5xrJ7RnGdxXB42uFEkYHJjszEhaJyKKt4WaLep",
   'RAYPOOL/USDC' : "3V2sfA9rCnBwjfqGca2UDxD4fVvPXW9GNAQCqAepKC9Q",
+  'REAL/USDC' : "AU8VGwd4NGRbcMz9LT6Fu2LP69LPAbWUJ6gEfEgeYM33",
   'RIN/USDC' : "7gZNLDbWE73ueAoHuAeFoSu7JqmorwCLpNTBXHtYSFTa",
   'ROPE/USDC' : "4Sg1g8U2ZuGnGYxAhc6MmX9MX7yZbrrraPkCQ9MdCPtF",
   'RSR/USDC' : "3h5QsiZKLkmApBTsMvJBZ8fPivo9HSrmR1LaJABN9zx6",
@@ -236,6 +240,7 @@ const nativeMarketsV3: Record<string, string> = {
   'WOO/USDC' : "2Ux1EYeWsxywPKouRCNiALCZ1y3m563Tc4hq1kQganiq",
   'WOOF/USDC' : "CwK9brJ43MR4BJz2dwnDM7EXCNyHhGqCJDrAdsEts8n5",
   'XTAG/USDC' : "6QM3iZfkVc5Yyb5z8Uya1mvqU1JBN9ez81u9463px45A",
+  'XVC/USDC' :"8GgBoTphoBifhwuybFguKevdjXTYGBLGcwpgG8cCewwk",
   'YFI/USDC' : "7qcCo8jqepnjjvB5swP4Afsr3keVBs6gNpBTNubd1Kr2",
   'renBCH/USDC' : "FS8EtiNZCH72pAK83YxqXaGAgk3KKFYphiTcYA2yRPis",
   'renBTC/USDC' : "74Ciu5yRzhe8TFTHvQuEVbFZJrbnCMRoohBK33NNiPtv",
@@ -243,6 +248,7 @@ const nativeMarketsV3: Record<string, string> = {
   'renLUNA/USDC' : "CxDhLbbM9uAA2AXfSPar5qmyfmC69NLj3vgJXYAsSVBT",
   'renZEC/USDC' : "2ahbUT5UryyRVxPnELtTmDLLneN26UjBQFgfMVvbWDTb",
 }
+
 
 
 

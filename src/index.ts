@@ -103,6 +103,7 @@ const programIdV3 = '9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin'
 
 
 
+
 const nativeMarketsV3: Record<string, string> = {
   '1INCH/USDT' : "HCyhGnC77f7DaxQEvzj59g9ve7eJJXjsMYFWo4t7shcj",
   'AAVE/USDC' : "CAww1itfT8rFeTCJCLZqTq9anZ7FpC8NzULNLcJMG4Qa",
@@ -134,6 +135,7 @@ const nativeMarketsV3: Record<string, string> = {
   'CRWNY/USDC' : "H8GSFzSZmPNs4ANW9dPd5XTgrzWkta3CaT57TgWYs7SV",
   'CWAR/USDC' : "CDYafmdHXtfZadhuXYiR7QaqmK9Ffgk2TA8otUWj9SWz",
   'CYS/USDC' : "6V6y6QFi17QZC9qNRpVp7SaPiHpCTp2skbRQkUyZZXPW",
+  'DAPE/USDC' : "CQQAHgfsu5uFTPzwewZ7QrLLSPk1K9MmqnuxiwmPDBzN",
   'DATE/USDC' : "3jszawPiXjuqg5MwAAHS8wehWy1k7de5u5pWmmPZf6dM",
   'DFL/USDC' : "9UBuWgKN8ZYXcZWN67Spfp3Yp67DKBq1t31WLrVrPjTR",
   'DXL/USDC' : "DYfigimKWc5VhavR4moPBibx9sMcWYVSjVdWvPztBPTa",
@@ -248,6 +250,7 @@ const nativeMarketsV3: Record<string, string> = {
   'renLUNA/USDC' : "CxDhLbbM9uAA2AXfSPar5qmyfmC69NLj3vgJXYAsSVBT",
   'renZEC/USDC' : "2ahbUT5UryyRVxPnELtTmDLLneN26UjBQFgfMVvbWDTb",
 }
+
 
 
 
